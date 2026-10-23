@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작은 방명록</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header class="intro">
+      <span class="eyebrow">GUESTBOOK</span>
+      <h1>잠깐의 방문,<br>한 줄의 인사.</h1>
+      <p>오늘의 마음이나 반가운 인사를 남겨 주세요.</p>
+    </header>
+    <section class="panel" aria-labelledby="write-title">
+      <h2 id="write-title">인사 남기기</h2>
+      $error
+      <form action="/entries" method="post" accept-charset="UTF-8">
+        <label for="name">이름 <span>최대 20자</span></label>
+        <input id="name" name="name" value="$name" maxlength="20" required autocomplete="nickname" placeholder="어떤 이름으로 남길까요?">
+        <label for="content">내용 <span>최대 1,000자</span></label>
+        <textarea id="content" name="content" rows="5" maxlength="1000" required placeholder="편하게 한마디 남겨 주세요.">$content</textarea>
+        <p class="hint">누구나 읽을 수 있는 공개 방명록입니다.</p>
+        <button type="submit">방명록 남기기 ↗</button>
+      </form>
+    </section>
+    <section class="messages" aria-labelledby="list-title">
+      <div class="section-heading"><h2 id="list-title">남겨진 인사</h2><span>총 $total개</span></div>
+      $entries
+      <nav aria-label="방명록 페이지">$navigation</nav>
+    </section>
+    <footer>작은 방명록 · 잠깐 머물다 가도 좋아요.</footer>
+  </main>
+</body>
+</html>

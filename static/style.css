@@ -1,0 +1,31 @@
+:root { color-scheme: light; font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif; color: #263c35; background: #f6f5ef; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { width: min(100% - 40px, 680px); margin: 64px auto 28px; }
+.eyebrow { color: #486953; font-size: 12px; letter-spacing: .2em; font-weight: 700; }
+h1 { font-size: clamp(32px, 6vw, 44px); line-height: 1.4; letter-spacing: -.05em; margin: 16px 0; }
+.intro > p, .hint, footer { color: #606c64; font-size: 14px; line-height: 1.7; }
+.panel { margin-top: 34px; padding: 28px; border: 1px solid #d7ddd2; background: #fffefa; border-radius: 12px; }
+h2 { font-size: 19px; margin: 0 0 24px; }
+label { display: flex; justify-content: space-between; font-size: 14px; font-weight: 700; margin: 20px 0 10px; }
+label span { font-size: 12px; font-weight: 400; color: #606c64; }
+input, textarea { display: block; width: 100%; font: inherit; font-size: 15px; padding: 13px 14px; border: 1px solid #cbd2c7; border-radius: 6px; background: white; color: #263c35; }
+textarea { resize: vertical; min-height: 130px; }
+input:focus, textarea:focus { outline: 2px solid #486953; outline-offset: 2px; }
+button { border: 0; border-radius: 6px; background: #315a43; color: #fff; padding: 14px 20px; font: inherit; font-size: 14px; cursor: pointer; }
+button:hover { background: #244632; }
+button:focus-visible, a:focus-visible { outline: 3px solid #486953; outline-offset: 3px; }
+.messages { margin-top: 42px; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; }
+.section-heading > span { font-size: 13px; color: #606c64; }
+.entry { border-top: 1px solid #d7ddd2; padding: 22px 0; }
+.entry header { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+.entry strong { overflow-wrap: anywhere; }
+time { font-size: 12px; color: #606c64; flex-shrink: 0; }
+.entry p { white-space: pre-wrap; overflow-wrap: anywhere; line-height: 1.8; margin-bottom: 0; }
+.empty { border: 1px dashed #cbd2c7; border-radius: 8px; color: #606c64; padding: 28px 20px; line-height: 1.8; text-align: center; }
+.error { background: #fff0ec; color: #8b3526; padding: 14px; line-height: 1.7; border-radius: 6px; }
+nav { display: flex; gap: 22px; justify-content: center; align-items: center; margin: 24px 0; font-size: 14px; }
+a { color: #315a43; text-underline-offset: 4px; }
+footer { border-top: 1px solid #d7ddd2; text-align: center; padding-top: 22px; margin-top: 36px; font-size: 12px; }
+@media (max-width: 480px) { main { margin-top: 32px; } .panel { padding: 20px; } .entry header { flex-direction: column; gap: 6px; } button { width: 100%; } }
